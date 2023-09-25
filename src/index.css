@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+main {
+  margin: auto;
+  padding: 30px 0;
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  /* max-width: 500px; */
+  /* margin: 30px auto; */
+  padding: 20px;
+}
+
+/* Form & Input */
+.form-input {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-input-filter {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+.btn-link {
+  font-size: 16px;
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-clear {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-clear:hover {
+  background-color: #f1f1f1;
+  color: red;
+}
+
+.btn-update {
+  background-color: green;
+}
+
+.btn-update:hover {
+  background-color: darkgreen;
+}
+
+.text-red {
+  color: red;
+}
+
+.remove-item:hover {
+  transform: scale(1.5);
+  /* text-shadow: 0 0 5px rgb(155, 155, 155); */
+}
+/* Items */
+
+.items {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items li {
+  display: flex;
+  justify-content: space-between;
+  width: calc(50% - 10px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 0 5px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.items li:hover {
+  background-color: #fefefe;
+}
+
+.items li:hover::after {
+  content: "Double click to edit";
+  font-size: 0.5em;
+  position: absolute;
+  bottom: 0;
+  color: green;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.selected {
+  color: #ccc;
+}
+
+@media (max-width: 500px) {
+  .items li {
+    width: 100%;
+  }
+}
